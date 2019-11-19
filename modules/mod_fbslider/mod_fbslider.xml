@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<extension	type="module"	version="3.0"	client="site"	method="upgrade">
+		<name>Facebook Slider Likebox</name> 
+        <author>Sanjay Kumar Roy</author> 
+        <creationDate>2013-05-25</creationDate> 
+        <license>GPL 2.0</license> 
+        <authorEmail>sanjay329@yahoo.com</authorEmail> 
+       	<version>1.0.0</version> 
+		<description>Facebook Slider Module</description>
+    <files>
+
+        <filename module="mod_fbslider">mod_fbslider.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+		<filename>vertical-right.png</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+
+    </files>
+<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="Module Class Suffix" />
+				<field name="loadjQuery" type="radio" default="1" label="Load jQuery" description="jQuery is required by this module. The only reason not to load it is if it has already been loaded manually or by another module.">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="@spacer" type="spacer" default="" label="" description="" />
+				<field name="fbpage_url" type="text" default="" label="Page URL" description="Page URL" />
+				<field name="show_faces" type="radio" default="true" label="Show People Faces" description="Show People Faces">
+						<option value="false">JNO</option>
+						<option value="true">JYES</option>
+				</field>
+				<field name="stream" type="radio" default="false" label="Display stream" description="Display stream">
+				<option value="false">JNO</option>
+				<option value="true">JYES</option>
+				</field>
+				<field name="fbtop" type="text" default="100" label="Margin top" description="Default: 100" />	
+				<field name="fbwidth" type="text" default="290" label="Width" description="Default: 290" />
+				<field name="fbheight" type="text" default="400" label="Height" description="Default: 400" />
+				<field name="colorscheme" type="list" default="light" label="Color Scheme" description="Color Scheme">
+						<option value="light">Light</option>
+						<option value="dark">Dark</option>
+					</field>
+				<field name="background" type="text" default="#FFFFFF" label="Background Colour" description="Background Colour" />
+				<field name="border_color" type="text" default="#ccc" label="Border Colour" description="Border Colour" />
+				
+			</fieldset>
+		</fields>
+	</config>
+</extension>
